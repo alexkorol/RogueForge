@@ -2,6 +2,7 @@ import detectEthereumProvider from '@metamask/detect-provider';
 import Web3 from 'web3';
 
 export async function getWeb3() {
+  console.log('getWeb3 called'); 
   const provider = await detectEthereumProvider();
   if (!provider) {
     alert('Please install Metamask to continue.');

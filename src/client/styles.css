@@ -1,38 +1,61 @@
-/* src/client/styles.css */
 body {
-    margin: 0;
-    overflow: hidden;
-    background-color: #f0f0f0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
+  margin: 0;
+  overflow: hidden;
+  background-color: #333333; /* Change the background color */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#game-container {
+  display: block;
+  width: 800px;
+  height: 600px;
+  margin: 0 auto;
+  border: 1px solid #000;
+  position: relative;
+}
+
+#connect-button {
+  position: absolute;
+  z-index: 1;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+img#logo {
+  position: absolute;
+  width: auto;
+  height: 100%;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+#my-connect-button {
+  position: absolute;
+  z-index: 2;
+  bottom: calc(10% + 10px); /* Move the button down */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #5a7688; /* Set the button background color */
+  color: white; /* Set the button text color */
+  border: none; /* Remove the default border */
+  padding: 10px 20px; /* Add padding for a nicer look */
+  font-size: 1.1em; /* Increase the font size */
+  cursor: pointer; /* Change the cursor to a pointer on hover */
+  border-radius: 5px; /* Add some border-radius for a rounded look */
+}
+
+/* Add hover effect for the button */
+#my-connect-button:hover {
+  background-color: #455c69;
+}
+
+
+
   
-  #game-container {
-    display: block;
-    width: 800px;
-    height: 600px;
-    margin: 0 auto;
-    border: 1px solid #000;
-    position: relative;
-  }
-  
-  #connect-button {
-    position: absolute;
-    z-index: 1;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  
-  img#logo {
-    position: absolute;
-    width: 200px;
-    height: auto;
-    top: -240px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1;
-  }  

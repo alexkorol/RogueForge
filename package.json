@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node src/server/app.js",
-    "dev": "concurrently \"npm run start\" \"npm run watch\""
+    "dev": "parcel src/client/index.html --open"
   },
   "repository": {
     "type": "git",
@@ -30,5 +30,8 @@
     "socket.io": "^4.6.1",
     "three": "^0.151.3",
     "web3": "^1.9.0"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5"
   }
 }
