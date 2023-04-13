@@ -8,7 +8,9 @@ export default class MainScene extends Phaser.Scene {
 
   create() {
     this.threeMap = new ThreeMap();
-    // ... (rest of the create method from step 6)
+
+    // Display the image
+    this.add.image(this.cameras.main.centerX, this.cameras.main.centerY, 'logo');
   }
 
   draw3D() {
@@ -20,6 +22,7 @@ export default class MainScene extends Phaser.Scene {
 
   update(time, delta) {
     this.draw3D();
-    // ... (rest of the update method from step 6)
+
+    // Update game objects and check for user input here
   }
 }

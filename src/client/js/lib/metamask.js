@@ -1,22 +1,24 @@
 import detectEthereumProvider from '@metamask/detect-provider';
+import Web3 from 'web3';
 
 export async function getWeb3() {
   const provider = await detectEthereumProvider();
+  if (!provider) {
+    alert('Please install Metamask to continue.');
+    return null;
+  }
 
-  if (provider) {
-  const web3 = new Web3(provider);
+  if (provider !== window.ethereum) {
+    alert('Please use the Metamask extension.');
+    return null;
+  }
 
   try {
-    // Request account access
-    await provider.request({ method: 'eth_requestAccounts' });
-    return web3;
+    await window.ethereum.request({ method: 'eth_requestAccounts' });
   } catch (error) {
     console.error('User denied account access');
-  }
-  
-} else {
-    console.error('No Ethereum provider found');
-    }
-    
     return null;
-    }
+  }
+
+  return new Web3(window.ethereum);
+}

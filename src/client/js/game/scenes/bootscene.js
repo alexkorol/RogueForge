@@ -1,4 +1,3 @@
-// BootScene.js
 import Phaser from 'phaser';
 
 export default class BootScene extends Phaser.Scene {
@@ -7,7 +6,8 @@ export default class BootScene extends Phaser.Scene {
   }
 
   preload() {
-    // Load assets here
+    // Load a sample image
+    this.load.image('logo', 'assets/logo.png');
   }
 
   create() {

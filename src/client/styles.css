@@ -1,0 +1,38 @@
+/* src/client/styles.css */
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  #game-container {
+    display: block;
+    width: 800px;
+    height: 600px;
+    margin: 0 auto;
+    border: 1px solid #000;
+    position: relative;
+  }
+  
+  #connect-button {
+    position: absolute;
+    z-index: 1;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  img#logo {
+    position: absolute;
+    width: 200px;
+    height: auto;
+    top: -240px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+  }  
